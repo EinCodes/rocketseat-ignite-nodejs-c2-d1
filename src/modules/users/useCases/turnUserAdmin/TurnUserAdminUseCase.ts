@@ -8,7 +8,8 @@ interface IRequest {
 class TurnUserAdminUseCase {
   constructor(private usersRepository: IUsersRepository) {}
 
-  execute({ user_id }: IRequest): User {
+  execute({ user_id }: IRequest): User | void {
+    // Remover Void
     // Complete aqui
   }
 }

@@ -3,9 +3,10 @@ import { Request, Response } from "express";
 import { ShowUserProfileUseCase } from "./ShowUserProfileUseCase";
 
 class ShowUserProfileController {
-  constructor(private showUserProfileUseCase: ShowUserProfileUseCase) {}
+  constructor(private showUserProfileUseCase: ShowUserProfileUseCase) { }
 
-  handle(request: Request, response: Response): Response {
+  handle(request: Request, response: Response): Response | void {
+    // Remover Void
     // Complete aqui
   }
 }
