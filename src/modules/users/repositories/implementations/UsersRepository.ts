@@ -44,10 +44,8 @@ class UsersRepository implements IUsersRepository {
     return undefined;
   }
 
-  list(): User[] | undefined {
-    // remover undefined
-    // Complete aqui
-    return undefined;
+  list(): User[] {
+    return [...this.users];
   }
 }
 
