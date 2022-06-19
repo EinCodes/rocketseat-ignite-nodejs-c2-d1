@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { User } from "../../model/User";
 import { IUsersRepository, ICreateUserDTO } from "../IUsersRepository";
 
@@ -36,10 +37,10 @@ class UsersRepository implements IUsersRepository {
     return this.users.find((user) => user.email === email);
   }
 
-  turnAdmin(receivedUser: User): User | undefined {
-    // remover undefined
-    // Complete aqui
-    return undefined;
+  turnAdmin(receivedUser: User): User {
+    receivedUser.updated_at = new Date();
+    receivedUser.admin = true;
+    return receivedUser;
   }
 
   list(): User[] {
